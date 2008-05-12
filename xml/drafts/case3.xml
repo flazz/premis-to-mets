@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example of PREMIS in METS. , One image (TIFF) which were transformed to JP2 and JPEG  -->
+
+<METS:mets xmlns:METS="http://www.loc.gov/METS/"
+
+  xmlns:daitss="http://www.fcla.edu/dls/md/daitss/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 				                      xmlns:mods="http://www.loc.gov/mods/v3" 
+  xmlns:premis="http://www.loc.gov/premis/v2/"
+  xmlns:mix="http://www.loc.gov/standards/mix/" 
+  xmlns:rightsmd="http://www.fcla.edu/dls/md/rightsmd/" 
+  xmlns:techmd="http://www.fcla.edu/dls/md/techmd/" 
+  xmlns:xlink="http://www.w3.org/1999/xlink" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+
+  xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/version14/mets.xsd    http://purl.org/dc/elements/1.1/ http://dublincore.org/schemas/xmls/simpledc20021212.xsd 
+http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-0.xsd 
+http://www.loc.gov/premis/v2 http://www.loc.gov/standards/premis/draft-schemas-2-0/premis-v2-0.xsd
+http://www.loc.gov/standards/mix/ http://www.loc.gov/standards/mix/mix10/mix10.xsd
+http://www.fcla.edu/dls/md/techmd/ http://www.fcla.edu/dls/md/techmd.xsd    http://www.fcla.edu/dls/md/palmm/ http://www.fcla.edu/dls/md/palmm.xsd 
+http://www.fcla.edu/dls/md/rightsmd/ http://www.fcla.edu/dls/md/rightsmd.xsd 
+http://www.fcla.edu/dls/md/daitss/ http://www.fcla.edu/dls/md/daitss/daitss.xsd" 
+
+  LABEL="Test Package" OBJID="FDA0000001" TYPE="photo" 
+/>
+
+<METS:metsHdr CREATEDATE="2002-11-13T14:48:05Z" ID="FDA0000001" LASTMODDATE="2007-04-11T16:50:34Z" RECORDSTATUS="NEW">
+
+
+	<METS:agent ROLE="OTHER" TYPE="ORGANIZATION">
+           <METS:name>FDA</METS:name> 
+           <METS:note>projects=FHP</METS:note>
+       </METS:agent>
+</METS:metsHdr>
+
+<METS:dmdSec ID="DMD1">
+
+       <METS:mdWrap xmlns:METS="http://www.loc.gov/METS/" MDTYPE="MODS" MIMETYPE="text/xml">
+           <METS:xmlData>
+               <mods:mods xmlns:mods="http://www.loc.gov/mods/v3">
+                   <mods:typeOfResource>text</mods:typeOfResource> 
+                   <mods:titleInfo>
+                       <mods:title>Title</mods:title>
+                   </mods:titleInfo>
+               </mods:mods>
+           </METS:xmlData>
+       </METS:mdWrap>
+</METS:dmdSec>
+
+
+<METS:amdSec>
+
+       <METS:techMD ID="OBJECT1">		
+           <METS:mdWrap MDTYPE="OTHER" MIMETYPE="text/xml" OTHERMDTYPE="PREMIS">
+               <METS:xmlData>
+                   <premis:object xsi:type="file">
+                        <premis:objectCharacteristics>
+                            <premis:compositionLevel>0</premis:compositionLevel>
+			     <premis:size>3001452</size>
+                            <premis:format>
+                                <premis:formatDesignation>
+                                    <premis:formatName>TIFF</premis:formatName>
+                                    <premis:formatVersion>4.0</premis:formatVersion>
+                                </premis:formatDesignation>
+							<premis:formatRegistry>
+								<premis:formatRegistryName>http://www.nationalarchives.gov.uk/pronom</premis:formatRegistryName>
+								<premis:formatRegistryKey>fmt/8</premis:formatRegistryKey>
+							</premis:formatRegistry>
+                            <premis:format>
+                            <premis:objectCharacteristicsExtension>
+								<mix:BasicImageInformation>
+									<mix:BasicImageCharacteristics>
+										<mix:imageWidth>1000</mix:imageWidth>
+										<mix:imageHeight>1000</mix:imageHeight>
+										<mix:ByteOrder>little-endian</mix:ByteOrder>
+										<mix:Compression>
+											<mix:CompressionScheme>1</mix:CompressionScheme>
+										</mix:Compression>
+										<mix:PhotometricInterpretation>
+											<mix:colorSpace>2</mix:ColorSpace>
+											<mix:referenceBlackWhite>0.0 255.0 0.0 255.0 0.0 255.0</mix:ReferenceBlackWhite>
+										</mix:PhotometricInterpretation>
+										<mix:PlanarConfiguration>1</mix:PlanarConfiguration>
+									</mix:BasicImageCharacteristics>
+									<mix:ImageCaptureMetadata>
+										<mix:orientation>1</mix:orientation>
+									</mix:ImageCaptureMetadata> 
+								</mix:BasicImageInformation>
+							</premis:objectCharacteristicsExtension>
+                       </premis:objectCharacteristics>
+                  </premis:Object>
+               </METS:xmlData>
+            </METS:mdwrap>
+         </METS:techMD>
+
+	     <METS:techMD ID="OBJECT2">		
+	           <METS:mdWrap MDTYPE="OTHER" MIMETYPE="text/xml" OTHERMDTYPE="PREMIS">
+	               <METS:xmlData>
+	                   <premis:object xsi:type="file">
+	                        <premis:objectCharacteristics>
+	                            <premis:compositionLevel>0</premis:compositionLevel>
+				     <premis:size>3001452</size>
+	                            <premis:format>
+	                                <premis:formatDesignation>
+	                                    <premis:formatName>JPEG 2000</premis:formatName>
+	                                </premis:formatDesignation>
+								<premis:formatRegistry>
+									<premis:formatRegistryName>http://www.nationalarchives.gov.uk/pronom</premis:formatRegistryName>
+									<premis:formatRegistryKey>x-fmt/392</premis:formatRegistryKey>
+								</premis:formatRegistry>
+	                            <premis:format>
+	                            <premis:objectCharacteristicsExtension>
+									<mix:BasicImageInformation>
+										<mix:BasicImageCharacteristics>
+											<mix:imageWidth>1000</mix:imageWidth>
+											<mix:imageHeight>1000</mix:imageHeight>
+											<mix:ByteOrder>little-endian</mix:ByteOrder>
+											<mix:Compression>
+												<mix:CompressionScheme>1</mix:CompressionScheme>
+											</mix:Compression>
+											<mix:PhotometricInterpretation>
+												<mix:colorSpace>2</mix:ColorSpace>
+												<mix:referenceBlackWhite>0.0 255.0 0.0 255.0 0.0 255.0</mix:ReferenceBlackWhite>
+											</mix:PhotometricInterpretation>
+											<mix:PlanarConfiguration>1</mix:PlanarConfiguration>
+										</mix:BasicImageCharacteristics>
+										<mix:ImageCaptureMetadata>
+											<mix:orientation>1</mix:orientation>
+										</mix:ImageCaptureMetadata> 
+									</mix:BasicImageInformation>
+								</premis:objectCharacteristicsExtension>
+	                       </premis:objectCharacteristics>
+	                  </premis:Object>
+	               </METS:xmlData>
+	            </METS:mdwrap>
+	         </METS:techMD>
+
+		     <METS:techMD ID="OBJECT3">		
+		           <METS:mdWrap MDTYPE="OTHER" MIMETYPE="text/xml" OTHERMDTYPE="PREMIS">
+		               <METS:xmlData>
+		                   <premis:object xsi:type="file">
+		                        <premis:objectCharacteristics>
+		                            <premis:compositionLevel>0</premis:compositionLevel>
+					     <premis:size>3001452</size>
+		                            <premis:format>
+		                                <premis:formatDesignation>
+		                                    <premis:formatName>JPEG </premis:formatName>
+		                              		<premis:formatVersion>1.02</premis:formatVersion>
+		                                </premis:formatDesignation>
+									<premis:formatRegistry>
+										<premis:formatRegistryName>http://www.nationalarchives.gov.uk/pronom</premis:formatRegistryName>
+										<premis:formatRegistryKey>fmt/44</premis:formatRegistryKey>
+									</premis:formatRegistry>
+		                            <premis:format>
+		                            <premis:objectCharacteristicsExtension>
+										<mix:BasicImageInformation>
+											<mix:BasicImageCharacteristics>
+												<mix:imageWidth>1000</mix:imageWidth>
+												<mix:imageHeight>1000</mix:imageHeight>
+												<mix:ByteOrder>little-endian</mix:ByteOrder>
+												<mix:Compression>
+													<mix:CompressionScheme>1</mix:CompressionScheme>
+												</mix:Compression>
+												<mix:PhotometricInterpretation>
+													<mix:colorSpace>2</mix:ColorSpace>
+													<mix:referenceBlackWhite>0.0 255.0 0.0 255.0 0.0 255.0</mix:ReferenceBlackWhite>
+												</mix:PhotometricInterpretation>
+												<mix:PlanarConfiguration>1</mix:PlanarConfiguration>
+											</mix:BasicImageCharacteristics>
+											<mix:ImageCaptureMetadata>
+												<mix:orientation>1</mix:orientation>
+											</mix:ImageCaptureMetadata> 
+										</mix:BasicImageInformation>
+									</premis:objectCharacteristicsExtension>
+		                       </premis:objectCharacteristics>
+		                  </premis:Object>
+		               </METS:xmlData>
+		            </METS:mdwrap>
+		         </METS:techMD>
+
+</METS:amdSec>
+
+<METS:amdSec>
+       <METS:rightsMD ID="RMD1">
+           <METS:mdWrap MDTYPE="OTHER" MIMETYPE="text/xml" OTHERMDTYPE="RIGHTSMD">
+               <METS:xmlData>
+                   <rightsmd:versionStatement>
+                       Electronic version created 2002, State University Sytem of Florida.
+	            </rightsmd:versionStatement>
+                   <rightsmd:copyrightStatement>Copyright 2007</rightsmd:copyrightStatement>
+               </METS:xmlData>
+           </METS:mdWrap>
+       </METS:rightsMD>
+</METS:amdSec>
+
+
+<METS:amdSec>
+       <METS:digiprovMD ID="DPMD1">
+           <METS:mdWrap MDTYPE="OTHER" OTHERMDTYPE="DAITSS">
+               <METS:xmlData>
+                   <!--DAITSS root element always used to enclose daitss
+                       metadata. All descriptors need agreement information-->
+                   <daitss:daitss>
+                       <daitss:AGREEMENT_INFO ACCOUNT="FDA" PROJECT="FDA"/>
+                   </daitss:daitss>
+               </METS:xmlData>
+           </METS:mdWrap>
+       </METS:digiprovMD>
+</METS:amdSec>
+
+<METS:amdSec>
+	<!-- Format Description (Identification+Validation) Event -->
+       <METS:digiprovMD ID="EVENT1" AMDID='OBJECT1 AGENT1'>
+           <METS:mdWrap MDTYPE="PREMIS">
+               <METS:xmlData>
+                   <premis:event>
+					<eventIdentifier>
+						<eventIdentifierType>FDA</eventIdentifierType>
+						<eventIdentfierValue>1</eventIdentfierValue>
+					</eventIdentfier>
+					<eventType>Format Validation</eventType>
+					<eventDateTime>2008-05-06T10:40:22-04:00</eventDateTime>
+					<eventOutcomeInformation>
+						<eventOutcome>Invalid</eventOutcome>
+						<eventOutcomeDetail>
+							<anomaly>Not Welformed Date/Time value</anomaly>
+						</eventOutcomeDetail>
+					</eventOutcomeInformation>
+					</premis:event>
+                    <premis:agent>
+
+               </METS:xmlData>
+           </METS:mdWrap>
+       </METS:digiprocMD>
+	<!-- This is the Format Description Service Agent -->
+       <METS:digiprovMD ID="AGENT1">
+           <METS:mdWrap MDTYPE="PREMIS">
+               <METS:xmlData>
+                   <premis:agent>
+						<agentIdentfier> 
+						<agentIdentfierType>URI</agentIdentfierType>
+						<agentIdentfierValue>http://localhost:3002/describe</agentIdentfierValue>	
+						</agentIdentfier>
+						<agentName>Format Description Service</agentName>
+						<agentType>Web Service</agentType>
+                    </premis:agent>
+               </METS:xmlData>
+           </METS:mdWrap>
+       </METS:digiprocMD>
+
+		<!-- Action Plan Event -->
+       <METS:digiprovMD ID="EVENT2" AMDID='OBJECT1 AGENT2'>
+           <METS:mdWrap MDTYPE="PREMIS">
+               <METS:xmlData>
+                   <premis:event>
+					<eventIdentifier>
+						<eventIdentifierType>FDA</eventIdentifierType>
+						<eventIdentfierValue>2</eventIdentfierValue>
+					</eventIdentfier>
+					<eventType>Action Plan</eventType>
+					<eventDateTime>2008-05-06T10:40:22-04:00</eventDateTime>
+					<eventOutcomeInformation>
+						<eventOutcome>
+							<transformer type="migrate">http://localhost:3002/tiff2jp2</transformer>
+							<transformer type="normalize">http://localhost:3002/tiff2jpeg</transformer>
+						</eventOutcome>
+					</eventOutcomeInformation>
+					</premis:event>
+                    <premis:agent>
+
+               </METS:xmlData>
+           </METS:mdWrap>
+       </METS:digiprocMD>
+
+       <METS:digiprovMD ID="EVENT3" AMDID='OBJECT1 AGENT3 OBJECT2'>
+           <METS:mdWrap MDTYPE="PREMIS">
+               <METS:xmlData>
+                   <premis:event>
+					<eventIdentifier>
+						<eventIdentifierType>FDA</eventIdentifierType>
+						<eventIdentfierValue>3</eventIdentfierValue>
+					</eventIdentfier>
+					<eventType>Migrate</eventType>
+					<eventDateTime>2008-05-06T10:40:22-04:00</eventDateTime>
+					<eventOutcomeInformation>
+						<eventOutcome>Success or Fail</eventOutcome>
+						<eventOutcomeDetail>
+							<quirk>change in video quality</quirk>
+						</eventOutcomeDetail>
+					</eventOutcomeInformation>
+					</premis:event>
+                    <premis:agent>
+               </METS:xmlData>
+           </METS:mdWrap>
+       </METS:digiprocMD>
+
+     <METS:digiprovMD ID="EVENT4" AMDID='OBJECT1 AGENT4 OBJECT3'>
+           <METS:mdWrap MDTYPE="PREMIS">
+               <METS:xmlData>
+                   <premis:event>
+					<eventIdentifier>
+						<eventIdentifierType>FDA</eventIdentifierType>
+						<eventIdentfierValue>3</eventIdentfierValue>
+					</eventIdentfier>
+					<eventType>Normalize</eventType>
+					<eventDateTime>2008-05-06T10:40:22-04:00</eventDateTime>
+					<eventOutcomeInformation>
+						<eventOutcome>Success or Fail</eventOutcome>
+					</eventOutcomeInformation>
+					</premis:event>
+                    <premis:agent>
+               </METS:xmlData>
+           </METS:mdWrap>
+       </METS:digiprocMD>
+
+       <METS:digiprovMD ID="AGENT2">
+           <METS:mdWrap MDTYPE="PREMIS">
+               <METS:xmlData>
+                   <premis:agent>
+						<agentIdentfier> 
+						<agentIdentfierType>URI</agentIdentfierType>
+						<agentIdentfierValue>http://localhost:3002/actionPlan</agentIdentfierValue>	
+						</agentIdentfier>
+						<agentName>Action Plan Service</agentName>
+						<agentType>Web Service</agentType>
+                    </premis:agent>
+               </METS:xmlData>
+           </METS:mdWrap>
+       </METS:digiprocMD>
+
+      <METS:digiprovMD ID="AGENT3">
+           <METS:mdWrap MDTYPE="PREMIS">
+               <METS:xmlData>
+                   <premis:agent>
+						<agentIdentfier> 
+						<agentIdentfierType>URI</agentIdentfierType>
+						<agentIdentfierValue>http://localhost:3002/tiff2jp2</agentIdentfierValue>	
+						</agentIdentfier>
+						<agentName>Tiff to JP2 conversion Service</agentName>
+						<agentType>Web Service</agentType>
+                    </premis:agent>
+               </METS:xmlData>
+           </METS:mdWrap>
+       </METS:digiprocMD>
+
+      <METS:digiprovMD ID="AGENT4">
+           <METS:mdWrap MDTYPE="PREMIS">
+               <METS:xmlData>
+                   <premis:agent>
+						<agentIdentfier> 
+						<agentIdentfierType>URI</agentIdentfierType>
+						<agentIdentfierValue>http://localhost:3002/tiff2jpeg</agentIdentfierValue>	
+						</agentIdentfier>
+						<agentName>TIFF to JPEG conversion Service</agentName>
+						<agentType>Web Service</agentType>
+                    </premis:agent>
+               </METS:xmlData>
+           </METS:mdWrap>
+       </METS:digiprocMD>
+</METS:amdSec>
+
+   <!-- It is not necessary to create multiple file groups for
+       each format included in the package, although it can be useful to do so to apply metadata sections to a group as a whole. -->
+
+<METS:fileSec>
+       <METS:fileGrp>
+           <METS:fileGrp>
+               <!-- file element includes some technical metadata. xlink:href is used to point to content files using relative system paths. Optional GROUPID is used to relate different representations of underlying content components (wave files and word docs as transcripts). Optional SEQ attribute is also used. Notice references to extension metadata sections using ADMID attribute-->
+
+               <METS:file ADMID="TMD1" CHECKSUM="2de9ef79df730f93e40819625cf7bcb2" CHECKSUMTYPE="MD5" CREATED="2002-11-13T14:46:28Z" GROUPID="GID8" ID="FID1" MIMETYPE="image/jpeg" SIZE="3452">
+                   <METS:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="SYSTEM" xlink:href="daitss.jpg"/>
+               </METS:file> 
+               <METS:file ADMID="TMD2" CHECKSUM="8c975de69a9419b8a02dc985839ea851" CHECKSUMTYPE="MD5" CREATED="2002-11-13T14:46:31Z" GROUPID="GID9" ID="FID2" MIMETYPE="image/jpeg" SIZE="19764">
+                   <METS:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="SYSTEM" xlink:href="diamondlogo.jpg"/>
+               </METS:file>
+           </METS:fileGrp>
+       </METS:fileGrp>
+</METS:fileSec>
+
+   <!-- structMap section uses fptr tags to reference files. Also, dmdSecs referenced that apply to both files appear in top level div.--> 
+
+<METS:structMap>
+       <METS:div ADMID="RMD1" DMDID="DMD1 DMD2" LABEL="Test package" TYPE="monograph">
+           <METS:div LABEL="Logos" TYPE="monograph">
+               <METS:div TYPE="page">
+                   <METS:fptr FILEID="FID1"/> <METS:fptr FILEID="FID2"/>
+               </METS:div>
+           </METS:div>
+       </METS:div>
+   </METS:structMap>
+</METS:mets>
