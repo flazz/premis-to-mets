@@ -1,0 +1,51 @@
+Model
+=====
+
+Sip descriptor
+-------------- 
+treated as a normal datafile, but the information extracted is integral to the
+processing of the SIP.
+
+Aip descriptor
+--------------
+premis document, no mets. describes everything that happened to the package.
+fixity of all files and verification of the descriptor (digital signature?) can
+insure integrity of the AIP and all processing that took place prior.
+
+Representations 
+--------------- 
+a representation is defined as the set of the most current version of each data
+file from the SIP.
+
+The original SIP is defined as R-0; The AIP after its first ingest is defined as
+R-1; after a dissemination and ingest R-2; etc. 
+
+The latest representation available can be though of as R-current. The most current
+possbile representation can be described as R-max. R-current is only equal to R-max
+if R-current is disseminated and then ingested and no transformations occur, else
+R-current is one representation (ingest) behind R-max.
+
+It is possible to dispose of all revisions but R-0 and R-current, in DAITSS1
+architecture all files not in R-0 and R-current are disposable.
+
+Use Cases
+=========
+some uses cases that demonstrate the benefits of the AIP model.
+
+archive to archive transfer
+---------------------------
+if the fixity of the files and authenticity of the descriptor are verified. the
+information in the descriptor need not be reproduced.
+
+recovery from disaster
+----------------------
+recovery from backup would be analogous to a archive to archive transfer from
+backup tapes that the AIPs are stored on. if the package is verified and the
+fixity of the files is intact all data can be loaded from the AIP without a full
+ingestion.
+
+recovering from incomplete ingest
+---------------------------------
+In the case the archive cannot fully ingest a SIP, the partial AIP can be saved
+until the system is capable of completing it. like when part of the system is down
+or when a bug fix need to happen.
