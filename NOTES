@@ -28,6 +28,16 @@ R-current is one representation (ingest) behind R-max.
 It is possible to dispose of all revisions but R-0 and R-current, in DAITSS1
 architecture all files not in R-0 and R-current are disposable.
 
+Localization
+------------
+at worse we keep a webslice, (not datafiles!)
+TODO: look more at premis dependency.
+
+Transformations
+---------------
+(xform: file1 -> file2)
+file1, file2 are objects; xform is the agent; -> is event; derrivation is the relation between the two
+
 Use Cases
 =========
 some uses cases that demonstrate the benefits of the AIP model.

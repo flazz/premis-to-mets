@@ -69,6 +69,13 @@
 			</contentLocation>
 			<storageMedium>Hard disk</storageMedium>
 		</storage>
+		
+<!-- 		<xs:element ref="signatureInformation" minOccurs="0" maxOccurs="unbounded"/>
+		<xs:element ref="relationship" minOccurs="0" maxOccurs="unbounded"/>
+		<xs:element ref="linkingEventIdentifier" minOccurs="0" maxOccurs="unbounded"/>
+		<xs:element ref="linkingIntellectualEntityIdentifier" minOccurs="0" maxOccurs="unbounded"/>
+		<xs:element ref="linkingRightsStatementIdentifier" minOccurs="0" maxOccurs="unbounded"/>
+		 -->
 	</object>
 	<event xmlns="info:lc/xmlns/premis-v2">
 		<eventIdentifier>
