@@ -147,29 +147,42 @@
 			</contentLocation>
 			<storageMedium>Hard disk</storageMedium>
 		</storage>
+		
+		<relationship>
+			<relationshipType>derrivation</relationshipType>
+			<relationshipSubType>has source</relationshipSubType>
+			<relatedObjectIdentification>
+				<relatedObjectIdentifierType>DAITSS</relatedObjectIdentifierType>
+				<relatedObjectIdentifierValue>daitss://archive.fcla.edu/p926/f0</relatedObjectIdentifierValue>
+			</relatedObjectIdentification>
+			<relatedEventIdentification>
+				<relatedEventIdentifierType>DAITSS</relatedEventIdentifierType>
+				<relatedEventIdentifierValue>3</relatedEventIdentifierValue>
+			</relatedEventIdentification>
+		</relationship>
+		
 	</object>
 
-
-	<!-- jpg normalized from tiff -->
+	<!-- jpg (normalized from tiff) -->
 	<object xsi:type="file">
 		<objectIdentifier>
 			<objectIdentifierType>DAITSS2</objectIdentifierType>
-			<objectIdentifierValue>daitss://archive.fcla.edu/p926/f2</objectIdentifierValue>
+			<objectIdentifierValue>daitss://archive.fcla.edu/p926/f1</objectIdentifierValue>
 		</objectIdentifier>
 		<objectCharacteristics>
 			<compositionLevel>0</compositionLevel> 
 			<fixity>
 				<messageDigestAlgorithm>MD5</messageDigestAlgorithm>
-				<messageDigest>3c273de69a9439b8402d8f85889e8858</messageDigest>
+				<messageDigest>8c975de69a9419b8a02dc985839ea851</messageDigest>
 			</fixity>
 			<size>3001452</size>
 			<format>
 				<formatDesignation>
-					<formatName>JPEG</formatName>
+					<formatName>JPG</formatName>
 				</formatDesignation>
 				<formatRegistry>
 					<formatRegistryName>http://www.nationalarchives.gov.uk/pronom</formatRegistryName>
-					<formatRegistryKey>fmt/44</formatRegistryKey>
+					<formatRegistryKey>x-fmt/392</formatRegistryKey>
 				</formatRegistry>								
 			</format>
 			<objectCharacteristicsExtension>
@@ -193,7 +206,7 @@
 				</BasicImageInformation>
 			</objectCharacteristicsExtension>
 		</objectCharacteristics>
-
+		
 		<!-- Three master copies: two in Gainesville, one in Tallahassee -->
 		<storage>
 			<contentLocation>
@@ -216,8 +229,21 @@
 			</contentLocation>
 			<storageMedium>Hard disk</storageMedium>
 		</storage>
+		
+		<relationship>
+			<relationshipType>derrivation</relationshipType>
+			<relationshipSubType>has source</relationshipSubType>
+			<relatedObjectIdentification>
+				<relatedObjectIdentifierType>DAITSS</relatedObjectIdentifierType>
+				<relatedObjectIdentifierValue>daitss://archive.fcla.edu/p926/f0</relatedObjectIdentifierValue>
+			</relatedObjectIdentification>
+			<relatedEventIdentification>
+				<relatedEventIdentifierType>DAITSS</relatedEventIdentifierType>
+				<relatedEventIdentifierValue>4</relatedEventIdentifierValue>
+			</relatedEventIdentification>
+		</relationship>
+		
 	</object>
-
 
 	<!-- R-0 (original sip) -->
 	<object xsi:type="representation">
@@ -282,7 +308,12 @@
 		<eventType>Action Plan</eventType>
 		<eventDateTime>2008-05-06T10:40:22-04:00</eventDateTime>
 		<eventOutcomeInformation>
-			<eventOutcome>No transformations</eventOutcome>
+			<eventOutcomeDetail>
+				<eventOutcomeDetailExtension>
+					<migrate>http://archive.fcla.edu/xform/tiff/jp2</migrate>
+					<normalize>http://archive.fcla.edu/xform/tiff/jpg</normalize>
+				</eventOutcomeDetailExtension>
+			</eventOutcomeDetail>
 		</eventOutcomeInformation>
 	</event>
 
@@ -297,6 +328,27 @@
 		<eventOutcomeInformation>
 			<eventOutcome>Success</eventOutcome>
 		</eventOutcomeInformation>
+		<linkingAgentIdentifier>
+			<linkingAgentIdentifierType>URI</linkingAgentIdentifierType>
+			<linkingAgentIdentifierValue>http://archive.fcla.edu/xform/tiff/jp2</linkingAgentIdentifierValue>
+		</linkingAgentIdentifier>
+	</event>	
+
+	<!-- normalization of file 1 to file 3 -->
+	<event>
+		<eventIdentifier>
+			<eventIdentifierType>DAITSS</eventIdentifierType>
+			<eventIdentifierValue>4</eventIdentifierValue>
+		</eventIdentifier>
+		<eventType>Normalize</eventType>
+		<eventDateTime>2008-05-06T10:40:22-04:00</eventDateTime>
+		<eventOutcomeInformation>
+			<eventOutcome>Success</eventOutcome>
+		</eventOutcomeInformation>
+		<linkingAgentIdentifier>
+			<linkingAgentIdentifierType>URI</linkingAgentIdentifierType>
+			<linkingAgentIdentifierValue>http://archive.fcla.edu/xform/tiff/jpg</linkingAgentIdentifierValue>
+		</linkingAgentIdentifier>
 	</event>	
 
 	<!-- format description service -->
@@ -326,6 +378,18 @@
 			<agentIdentifierValue>http://archive.fcla.edu/xform/tiff/jp2</agentIdentifierValue>
 		</agentIdentifier>
 		<agentName>Tiff to JP2 conversion Service</agentName>
-		<agentType>Web Service</agentType>						
+		<agentType>Web Service</agentType>		
+		<!-- TODO link to all events that use this agent -->
+	</agent>	
+
+	<!-- tiff to jp2 transformation service -->
+	<agent>
+		<agentIdentifier>
+			<agentIdentifierType>URI</agentIdentifierType>
+			<agentIdentifierValue>http://archive.fcla.edu/xform/tiff/jpg</agentIdentifierValue>
+		</agentIdentifier>
+		<agentName>Tiff to JPG conversion Service</agentName>
+		<agentType>Web Service</agentType>		
+		<!-- TODO link to all events that use this agent -->
 	</agent>	
 </premis>
