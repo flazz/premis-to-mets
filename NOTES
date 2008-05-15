@@ -3,7 +3,7 @@ Model
 
 Sip descriptor
 -------------- 
-treated as a normal datafile, but the information extracted is integral to the
+Treated as a normal datafile, but the information extracted is integral to the
 processing of the SIP.
 
 Aip descriptor
@@ -29,10 +29,7 @@ Localization
 at worse we keep a webslice, (not datafiles!)
 TODO: look more at premis dependency.
 
-Transformations
----------------
-(xform: file1 -> file2)
-file1, file2 are objects; xform is the agent; -> is event; derrivation is the relation between the two
+at best: we sha1 the valid xml file and trust, no saving schema.
 
 File vs Bitstreams
 ------------------
@@ -44,6 +41,9 @@ is storage information needed for bitstream, PREMIS says we do.  This is a error
 
 Events & Relationships
 ----------------------
+Mock up revised premis transformation model: focal point of event is in a relationship of
+the product transformation.
+
 Relationships are only recorded when no events are involved. when events are involved
 there is an implicity relationship between objects and agents. premis relationships are
 distributed in objects so the complexity goes up with the square of the number of
@@ -67,6 +67,10 @@ recovery from backup would be analogous to a archive to archive transfer from
 backup tapes that the AIPs are stored on. if the package is verified and the
 fixity of the files is intact all data can be loaded from the AIP without a full
 ingestion.
+
+spreading out work
+------------------
+other agencies can do work and sign it and we take their word for it.
 
 recovering from incomplete ingest
 ---------------------------------
