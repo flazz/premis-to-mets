@@ -147,6 +147,17 @@
 			</contentLocation>
 			<storageMedium>Hard disk</storageMedium>
 		</storage>
+		
+		<relationship>
+			<relationshipType>derrivation</relationshipType>
+			<relationshipSubType>has source</relationshipSubType>
+			<relatedObjectIdentification>
+				<relatedObjectIdentifierType>DAITSS</relatedObjectIdentifierType>
+				<relatedObjectIdentifierValue>daitss://archive.fcla.edu/p926/f0</relatedObjectIdentifierValue>
+			</relatedObjectIdentification>
+
+		</relationship>
+		
 	</object>
 
 	<!-- R-0 (original sip) -->
