@@ -155,7 +155,10 @@
 				<relatedObjectIdentifierType>DAITSS</relatedObjectIdentifierType>
 				<relatedObjectIdentifierValue>daitss://archive.fcla.edu/p926/f0</relatedObjectIdentifierValue>
 			</relatedObjectIdentification>
-
+			<relatedEventIdentification>
+				<relatedEventIdentifierType>DAITSS</relatedEventIdentifierType>
+				<relatedEventIdentifierValue>3</relatedEventIdentifierValue>
+			</relatedEventIdentification>
 		</relationship>
 		
 	</object>
