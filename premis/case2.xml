@@ -227,6 +227,10 @@
 		<eventOutcomeInformation>
 			<eventOutcome>Success</eventOutcome>
 		</eventOutcomeInformation>
+		<linkingAgentIdentifier>
+			<linkingAgentIdentifierType>URI</linkingAgentIdentifierType>
+			<linkingAgentIdentifierValue>http://archive.fcla.edu/xform/tiff/jp2</linkingAgentIdentifierValue>
+		</linkingAgentIdentifier>
 	</event>	
 
 	<!-- format description service -->
