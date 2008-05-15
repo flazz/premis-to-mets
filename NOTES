@@ -38,6 +38,12 @@ Transformations
 (xform: file1 -> file2)
 file1, file2 are objects; xform is the agent; -> is event; derrivation is the relation between the two
 
+File vs Bitstreams
+------------------
+Files contain bitstreams, size, paths, message digests, etc. every file with a known
+format has at least one bitstream of that format. Bitstreams are represented using
+format information.
+
 Use Cases
 =========
 some uses cases that demonstrate the benefits of the AIP model.
