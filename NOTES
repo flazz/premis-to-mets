@@ -40,9 +40,21 @@ file1, file2 are objects; xform is the agent; -> is event; derrivation is the re
 
 File vs Bitstreams
 ------------------
-Files contain bitstreams, size, paths, message digests, etc. every file with a known
-format has at least one bitstream of that format. Bitstreams are represented using
-format information.
+Files contain bitstreams, size, paths, message digests, etc. every file with a
+known format has at least one bitstream of that format. Bitstreams are represented
+using format information.
+
+is storage information needed for bitstream, PREMIS says we do.
+
+Events & Relationships
+----------------------
+Relationships are only recorded when no events are involved. when events are involved
+there is an implicity relationship between objects and agents. premis relationships are
+distributed in objects so the complexity goes up with the square of the number of
+objects/agents, if the relationship is derrived from the event, the complexity scales
+linearly to the amount of agents/objects.
+
+when events are explicit relationships are implicit, and visa versa.
 
 Use Cases
 =========
