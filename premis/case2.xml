@@ -226,7 +226,12 @@
 		<eventType>Action Plan</eventType>
 		<eventDateTime>2008-05-06T10:40:22-04:00</eventDateTime>
 		<eventOutcomeInformation>
-			<eventOutcome>No transformations</eventOutcome>
+			<eventOutcomeDetail>
+				<eventOutcomeDetailExtension>
+					<migrate>http://archive.fcla.edu/xform/tiff/jp2</migrate>
+					<normalize>http://archive.fcla.edu/xform/tiff/jpg</normalize>					
+				</eventOutcomeDetailExtension>
+			</eventOutcomeDetail>
 		</eventOutcomeInformation>
 	</event>
 
