@@ -4,7 +4,7 @@
 	C. Chou, F. Lazzarino
 -->
 <premis xmlns="info:lc/xmlns/premis-v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="info:lc/xmlns/premis-v2 http://www.loc.gov/standards/premis/draft-schemas-2-0/premis-v2-0.xsd http://www.loc.gov/mix/v10 http://www.loc.gov/standards/mix/mix10/mix10.xsd" version="2.0">
-	<object  xsi:type="file" xmlns="info:lc/xmlns/premis-v2">
+	<object  xsi:type="file">
 		<objectIdentifier>
 			<objectIdentifierType>DAITSS2</objectIdentifierType>
 			<objectIdentifierValue>daitss://archive.fcla.edu/p926/f0</objectIdentifierValue>
@@ -70,14 +70,29 @@
 			<storageMedium>Hard disk</storageMedium>
 		</storage>
 		
-<!-- 		<xs:element ref="signatureInformation" minOccurs="0" maxOccurs="unbounded"/>
-		<xs:element ref="relationship" minOccurs="0" maxOccurs="unbounded"/>
-		<xs:element ref="linkingEventIdentifier" minOccurs="0" maxOccurs="unbounded"/>
-		<xs:element ref="linkingIntellectualEntityIdentifier" minOccurs="0" maxOccurs="unbounded"/>
-		<xs:element ref="linkingRightsStatementIdentifier" minOccurs="0" maxOccurs="unbounded"/>
-		 -->
+		<!-- 		
+			<xs:element ref="signatureInformation" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="relationship" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="linkingEventIdentifier" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="linkingIntellectualEntityIdentifier" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="linkingRightsStatementIdentifier" minOccurs="0" maxOccurs="unbounded"/>
+		-->
 	</object>
-	<event xmlns="info:lc/xmlns/premis-v2">
+	<object xsi:type="representation">
+		<objectIdentifier>
+			<objectIdentifierType>TBD</objectIdentifierType>
+			<objectIdentifierValue>R-0</objectIdentifierValue>
+		</objectIdentifier>
+		<relationship>
+			<relationshipType>Structural</relationshipType>
+			<relationshipSubType>Includes</relationshipSubType>
+			<relatedObjectIdentification>
+				<relatedObjectIdentifierType>DAITSS2</relatedObjectIdentifierType>
+				<relatedObjectIdentifierValue>daitss://archive.fcla.edu/p926/f0</relatedObjectIdentifierValue>
+			</relatedObjectIdentification>
+		</relationship>
+	</object>
+	<event>
 		<eventIdentifier>
 			<eventIdentifierType>DAITSS</eventIdentifierType>
 			<eventIdentifierValue>1</eventIdentifierValue>
@@ -92,8 +107,12 @@
 				</eventOutcomeDetailExtension>
 			</eventOutcomeDetail>
 		</eventOutcomeInformation>
+		<!--
+			<xs:element name="linkingAgentIdentifier" type="eventLinkingAgentIdentifierComplexType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="linkingObjectIdentifier" type="eventLinkingObjectIdentifierComplexType" minOccurs="0" maxOccurs="unbounded"/> 
+		-->		
 	</event>
-	<event xmlns="info:lc/xmlns/premis-v2">
+	<event>
 		<eventIdentifier>
 			<eventIdentifierType>DAITSS</eventIdentifierType>
 			<eventIdentifierValue>2</eventIdentifierValue>
@@ -104,7 +123,7 @@
 			<eventOutcome>No transformations</eventOutcome>
 		</eventOutcomeInformation>
 	</event>
-	<agent xmlns="info:lc/xmlns/premis-v2">
+	<agent>
 		<agentIdentifier>
 			<agentIdentifierType>URI</agentIdentifierType>
 			<agentIdentifierValue>http://archive.fcla.edu/format-description</agentIdentifierValue>
@@ -112,7 +131,7 @@
 		<agentName>Format Description Service</agentName>
 		<agentType>Web Service</agentType>
 	</agent>
-	<agent xmlns="info:lc/xmlns/premis-v2">
+	<agent>
 		<agentIdentifier>
 			<agentIdentifierType>URI</agentIdentifierType>
 			<agentIdentifierValue>http://archive.fcla.edu/action-plan</agentIdentifierValue>
