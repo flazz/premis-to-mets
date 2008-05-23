@@ -229,7 +229,7 @@
 			<eventOutcomeDetail>
 				<eventOutcomeDetailExtension>
 					<migrate>http://archive.fcla.edu/xform/tiff/jp2</migrate>
-					<normalize>http://archive.fcla.edu/xform/tiff/jpg</normalize>					
+<limitation type="normalize">Unsupported palette value</limitation>									
 				</eventOutcomeDetailExtension>
 			</eventOutcomeDetail>
 		</eventOutcomeInformation>

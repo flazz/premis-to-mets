@@ -7,80 +7,6 @@
 
 	<!-- tiff (submitted) -->
 	<object xsi:type="file">
-		<objectIdentifier>
-			<objectIdentifierType>DAITSS2</objectIdentifierType>
-			<objectIdentifierValue>daitss://archive.fcla.edu/p926/f0</objectIdentifierValue>
-		</objectIdentifier>
-		<objectCharacteristics>
-			<compositionLevel>0</compositionLevel>
-			<fixity>
-				<messageDigestAlgorithm>MD5</messageDigestAlgorithm>
-				<messageDigest>2de9ef79df730f93e40819625cf7bcb2</messageDigest>
-			</fixity>
-			<size>3001452</size>
-			<format>
-				<formatDesignation>
-					<formatName>TIFF</formatName>
-					<formatVersion>4.0</formatVersion>
-				</formatDesignation>
-				<formatRegistry>
-					<formatRegistryName>http://www.nationalarchives.gov.uk/pronom</formatRegistryName>
-					<formatRegistryKey>fmt/8</formatRegistryKey>
-				</formatRegistry>
-			</format>
-			<objectCharacteristicsExtension>
-				<BasicImageInformation xmlns="http://www.loc.gov/mix/v10">
-					<BasicImageCharacteristics>
-						<imageWidth>1000</imageWidth>
-						<imageHeight>1000</imageHeight>
-						<ByteOrder>little-endian</ByteOrder>
-						<Compression>
-							<CompressionScheme>1</CompressionScheme>
-						</Compression>
-						<PhotometricInterpretation>
-							<ColorSpace>2</ColorSpace>
-							<ReferenceBlackWhite>0.0 255.0 0.0 255.0 0.0 255.0</ReferenceBlackWhite>
-						</PhotometricInterpretation>
-						<PlanarConfiguration>1</PlanarConfiguration>
-					</BasicImageCharacteristics>
-					<ImageCaptureMetadata>
-						<orientation>1</orientation>
-					</ImageCaptureMetadata>
-				</BasicImageInformation>
-			</objectCharacteristicsExtension>
-		</objectCharacteristics>
-		<!-- Three master copies: two in Gainesville, one in Tallahassee -->
-		<storage>
-			<contentLocation>
-				<contentLocationType>URL</contentLocationType>
-				<contentLocationValue>http://archive.fcla.edu:5000/silos/gainesville-1/p926</contentLocationValue>
-			</contentLocation>
-			<storageMedium>Hard disk</storageMedium>
-		</storage>
-		<storage>
-			<contentLocation>
-				<contentLocationType>URL</contentLocationType>
-				<contentLocationValue>http://archive.fcla.edu:5000/silos/gainesville-2/p926</contentLocationValue>
-			</contentLocation>
-			<storageMedium>Hard disk</storageMedium>
-		</storage>
-		<storage>
-			<contentLocation>
-				<contentLocationType>URL</contentLocationType>
-				<contentLocationValue>http://archive.fcla.edu:5000/silos/tallahassee-1/p926</contentLocationValue>
-			</contentLocation>
-			<storageMedium>Hard disk</storageMedium>
-		</storage>
-		
-		<!-- 		
-			<xs:element ref="signatureInformation" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element ref="relationship" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element ref="linkingEventIdentifier" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element ref="linkingIntellectualEntityIdentifier" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element ref="linkingRightsStatementIdentifier" minOccurs="0" maxOccurs="unbounded"/>
-		-->
-	</object>
-
 	<!-- jp2 (migrated from tiff) -->
 	<object xsi:type="file">
 		<objectIdentifier>
@@ -149,7 +75,7 @@
 		</storage>
 		
 		<relationship>
-			<relationshipType>derrivation</relationshipType>
+			<relationshipType>derivation</relationshipType>
 			<relationshipSubType>has source</relationshipSubType>
 			<relatedObjectIdentification>
 				<relatedObjectIdentifierType>DAITSS</relatedObjectIdentifierType>
@@ -231,7 +157,7 @@
 		</storage>
 		
 		<relationship>
-			<relationshipType>derrivation</relationshipType>
+			<relationshipType>derivation</relationshipType>
 			<relationshipSubType>has source</relationshipSubType>
 			<relatedObjectIdentification>
 				<relatedObjectIdentifierType>DAITSS</relatedObjectIdentifierType>
@@ -323,7 +249,7 @@
 			<eventIdentifierType>DAITSS</eventIdentifierType>
 			<eventIdentifierValue>3</eventIdentifierValue>
 		</eventIdentifier>
-		<eventType>Migrate</eventType>
+		<eventType>migration</eventType>
 		<eventDateTime>2008-05-06T10:40:22-04:00</eventDateTime>
 		<eventOutcomeInformation>
 			<eventOutcome>Success</eventOutcome>
@@ -340,10 +266,15 @@
 			<eventIdentifierType>DAITSS</eventIdentifierType>
 			<eventIdentifierValue>4</eventIdentifierValue>
 		</eventIdentifier>
-		<eventType>Normalize</eventType>
+		<eventType>normalization</eventType>
 		<eventDateTime>2008-05-06T10:40:22-04:00</eventDateTime>
 		<eventOutcomeInformation>
 			<eventOutcome>Success</eventOutcome>
+				<eventOutcomeDetail>
+					<eventOutcomeDetailExtension>
+						<quirk>image quality changed</quirk>
+					</eventOutcomeDetailExtension>					
+				</eventOutcomeDetail>
 		</eventOutcomeInformation>
 		<linkingAgentIdentifier>
 			<linkingAgentIdentifierType>URI</linkingAgentIdentifierType>
