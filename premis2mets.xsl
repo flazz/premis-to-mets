@@ -24,8 +24,18 @@
 
 	<!-- mets file -->
 	<xsl:template match="premis:object[@xsi:type='file']" mode="file">
-		<file>
-			<!-- if identifier type is in loctype then set loctype to it, otherwise set it to other and otherloctype -->
+		<file>			
+			
+			<!-- size -->
+			<xsl:attribute name="SIZE"><xsl:value-of select="premis:objectCharacteristics/premis:size"/></xsl:attribute>
+			
+			
+			<!-- checksum -->
+			<xsl:attribute name="CHECKSUM"><xsl:value-of select="premis:objectCharacteristics/premis:fixity/premis:messageDigest"/></xsl:attribute>
+			<xsl:if test="contains('HAVAL MD5 SHA-1 SHA-256 SHA-384 SHA-512 TIGER WHIRLPOOL', premis:objectCharacteristics/premis:fixity/premis:messageDigestAlgorithm)">
+				<xsl:attribute name="CHECKSUMTYPE"><xsl:value-of select="premis:objectCharacteristics/premis:fixity/premis:messageDigestAlgorithm"/></xsl:attribute>
+			</xsl:if>
+			<!-- if identifier type is in LOCTYPE then set LOCTYPE to it, otherwise set it to OTHER and OTHERLOCTYPE -->
 			<Flocat>
 				<xsl:choose>
 					<xsl:when test="contains('ARK URN URL PURL HANDLE DOI', premis:objectIdentifier/premis:objectIdentifierType)">

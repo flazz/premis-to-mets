@@ -12,7 +12,7 @@
 		<techMD ID="object-1">
 			<mdWrap MDTYPE="PREMIS">
 				<xmlData>
-					<file xmlns="info:lc/xmlns/premis-v2">
+					<object xsi:type='file' xmlns="info:lc/xmlns/premis-v2">
 						
 						<!-- 
 							File is identified by a hypothetical DAITSS v2 url:
@@ -89,7 +89,7 @@
 							</contentLocation>
 							<storageMedium>Hard disk</storageMedium>
 						</storage>
-					</file>
+					</object>
 				</xmlData>
 			</mdWrap>
 		</techMD>
@@ -175,9 +175,11 @@
 			<file ID="file-1" ADMID="object-1"/>
 		</fileGrp>
 	</fileSec>
-	<structMap>
+	
+	<structMap ID='structmap-0' ADMID="representation-0">
 		<div>
 			<fptr FILEID="file-1"/>
 		</div>
 	</structMap>
+	
 </mets>
