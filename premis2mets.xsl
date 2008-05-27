@@ -25,16 +25,21 @@
 	<!-- mets file -->
 	<xsl:template match="premis:object[@xsi:type='file']" mode="file">
 		<file>			
+			<!-- ID -->
+			<xsl:attribute name="ID"><xsl:text>TODO ID goes here</xsl:text></xsl:attribute>
+			
+			<!-- ADMID -->
+			<xsl:attribute name="ADMID"><xsl:text>TODO ID refs goe here</xsl:text></xsl:attribute>			
 			
 			<!-- size -->
-			<xsl:attribute name="SIZE"><xsl:value-of select="premis:objectCharacteristics/premis:size"/></xsl:attribute>
-			
+			<xsl:attribute name="SIZE"><xsl:value-of select="premis:objectCharacteristics/premis:size"/></xsl:attribute>	
 			
 			<!-- checksum -->
 			<xsl:attribute name="CHECKSUM"><xsl:value-of select="premis:objectCharacteristics/premis:fixity/premis:messageDigest"/></xsl:attribute>
 			<xsl:if test="contains('HAVAL MD5 SHA-1 SHA-256 SHA-384 SHA-512 TIGER WHIRLPOOL', premis:objectCharacteristics/premis:fixity/premis:messageDigestAlgorithm)">
 				<xsl:attribute name="CHECKSUMTYPE"><xsl:value-of select="premis:objectCharacteristics/premis:fixity/premis:messageDigestAlgorithm"/></xsl:attribute>
 			</xsl:if>
+			
 			<!-- if identifier type is in LOCTYPE then set LOCTYPE to it, otherwise set it to OTHER and OTHERLOCTYPE -->
 			<Flocat>
 				<xsl:choose>
@@ -51,7 +56,7 @@
 		</file>
 	</xsl:template>
 
-	<!-- want to make structmap for every representation -->
+	<!-- make structmap for every representation -->
 	<xsl:template match="object[@xsi:type='representation']">
 		<structMap>
 			<div>
