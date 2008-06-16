@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets xmlns="http://www.loc.gov/METS/" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/version17/mets.xsd
+	info:lc/xmlns/premis-v2 http://www.loc.gov/standards/premis/draft-schemas-2-0/premis-v2-0.xsd">
+	<amdSec>
+		<techMD ID="tmd-1">
+			<mdWrap MDTYPE="PREMIS">
+				<xmlData>
+					<object xsi:type="file" xmlns="info:lc/xmlns/premis-v2">
+						<objectIdentifier>
+							<objectIdentifierType/>
+							<objectIdentifierValue/>
+						</objectIdentifier>
+						<objectCharacteristics>
+							<compositionLevel>1</compositionLevel>
+							<format>
+								<formatDesignation>
+									<formatName/>
+								</formatDesignation>
+							</format>
+						</objectCharacteristics>
+						<storage>
+							<contentLocation>
+								<contentLocationType/>
+								<contentLocationValue/>
+							</contentLocation>
+						</storage>
+					</object>
+				</xmlData>
+			</mdWrap>
+		</techMD>
+	</amdSec>
+	<structMap>
+		<div/>
+	</structMap>
+</mets>
