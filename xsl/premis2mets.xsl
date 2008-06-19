@@ -5,7 +5,7 @@
 		<mets>
 			<amdSec>
 				<xsl:apply-templates select="premis:object[@xsi:type='file']" mode="bucket"/>
-				<xsl:apply-templates select="premis:object[xsi:type='representation']"/>
+				<!-- <xsl:apply-templates select="premis:object[@xsi:type='representation']"/> -->
 				<xsl:apply-templates select="premis:event"/>
 				<xsl:apply-templates select="premis:agent"/>
 			</amdSec>
@@ -17,7 +17,7 @@
 			<structMap>
 				<div/>
 			</structMap>
-			<xsl:apply-templates select="object[xsi:type='representation']"/>
+			<xsl:apply-templates select="premis:object[@xsi:type='representation'][premis:relationship/premis:relationshipType='Structural']"/>
 		</mets>
 	</xsl:template>
 <!-- mets file -->
@@ -68,13 +68,32 @@
 		</file>
 	</xsl:template>
 <!-- make structmap for every representation -->
-	<xsl:template match="object[@xsi:type='representation']">
+	<xsl:template match="premis:object[@xsi:type='representation'][premis:relationship/premis:relationshipType='Structural']">
 		<structMap>
 			<div>
-				<xsl:comment>TODO div for each representation goes here</xsl:comment>
+				<!-- find file position where type and value match -->
+				<xsl:variable name="oType">
+					<xsl:value-of select="premis:relationship/premis:relatedObjectIdentification/premis:relatedObjectIdentifierType"/>					
+				</xsl:variable>
+				<xsl:variable name="oValue">
+					<xsl:value-of select="premis:relationship/premis:relatedObjectIdentification/premis:relatedObjectIdentifierValue"/>
+				</xsl:variable>
+				<xsl:for-each select="//premis:object[@xsi:type='file']">
+					<xsl:if test="(premis:objectIdentifier/premis:objectIdentifierType=$oType) and (premis:objectIdentifier/premis:objectIdentifierValue=$oValue)">
+						<div>
+							<fptr>
+								<xsl:attribute name="FILEID">
+									<xsl:text>OBJECT-</xsl:text><xsl:value-of select = "position()" />
+								</xsl:attribute>
+							</fptr>
+						</div>						
+					</xsl:if>
+				</xsl:for-each>
 			</div>
 		</structMap>
 	</xsl:template>
+	
+	
 <!-- techMD for premis files -->
 	<xsl:template match="premis:object[@xsi:type='file']" mode="bucket">
 		<xsl:call-template name="tech-bucket">
