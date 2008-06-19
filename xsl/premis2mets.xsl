@@ -25,11 +25,11 @@
 		<file>
 <!-- ID -->
 			<xsl:attribute name="ID">
-				<xsl:text>FILE-</xsl:text><xsl:value-of select="generate-id()" />
+				<xsl:text>FILE-</xsl:text><xsl:value-of select="position()" />
 			</xsl:attribute>
 <!-- ADMID -->
 			<xsl:attribute name="ADMID">
-				<xsl:text>OBJECT-</xsl:text><xsl:value-of select="generate-id()" />
+				<xsl:text>OBJECT-</xsl:text><xsl:value-of select="position()" />
 			</xsl:attribute>
 <!-- size -->
 			<xsl:attribute name="SIZE">
@@ -82,7 +82,7 @@
 				<xsl:copy-of select="."/>
 			</xsl:with-param>
 			<xsl:with-param name="identifier">
-				<xsl:text>OBJECT-</xsl:text><xsl:value-of select="generate-id()" />
+				<xsl:text>OBJECT-</xsl:text><xsl:value-of select="position()" />
 			</xsl:with-param>
 		</xsl:call-template>
 	</xsl:template>
@@ -93,7 +93,7 @@
 				<xsl:copy-of select="."/>
 			</xsl:with-param>
 			<xsl:with-param name="identifier">
-				<xsl:text>REPRESENTATION-</xsl:text><xsl:value-of select="generate-id()" />
+				<xsl:text>REPRESENTATION-</xsl:text><xsl:value-of select="position()" />
 			</xsl:with-param>
 		</xsl:call-template>
 	</xsl:template>
@@ -104,7 +104,7 @@
 				<xsl:copy-of select="."/>
 			</xsl:with-param>
 			<xsl:with-param name="identifier">
-				<xsl:text>EVENT-</xsl:text><xsl:value-of select="generate-id()" />
+				<xsl:text>EVENT-</xsl:text><xsl:value-of select="position()" />
 			</xsl:with-param>			
 		</xsl:call-template>
 	</xsl:template>
@@ -115,7 +115,7 @@
 				<xsl:copy-of select="."/>
 			</xsl:with-param>
 			<xsl:with-param name="identifier">
-				<xsl:text>AGENT-</xsl:text><xsl:value-of select="generate-id()" />
+				<xsl:text>AGENT-</xsl:text><xsl:value-of select="position()" />
 			</xsl:with-param>
 		</xsl:call-template>
 	</xsl:template>
