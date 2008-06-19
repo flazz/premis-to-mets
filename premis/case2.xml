@@ -70,15 +70,7 @@
 				<contentLocationValue>http://archive.fcla.edu:5000/silos/tallahassee-1/p926</contentLocationValue>
 			</contentLocation>
 			<storageMedium>Hard disk</storageMedium>
-		</storage>
-		
-		<!-- 		
-			<xs:element ref="signatureInformation" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element ref="relationship" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element ref="linkingEventIdentifier" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element ref="linkingIntellectualEntityIdentifier" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element ref="linkingRightsStatementIdentifier" minOccurs="0" maxOccurs="unbounded"/>
-		-->
+		</storage>		
 	</object>
 
 	<!-- jp2 (migrated from tiff) -->
@@ -152,7 +144,7 @@
 			<relationshipType>derrivation</relationshipType>
 			<relationshipSubType>has source</relationshipSubType>
 			<relatedObjectIdentification>
-				<relatedObjectIdentifierType>DAITSS</relatedObjectIdentifierType>
+				<relatedObjectIdentifierType>DAITSS2</relatedObjectIdentifierType>
 				<relatedObjectIdentifierValue>daitss://archive.fcla.edu/p926/f0</relatedObjectIdentifierValue>
 			</relatedObjectIdentification>
 			<relatedEventIdentification>
@@ -215,6 +207,10 @@
 			<linkingAgentIdentifierType>URI</linkingAgentIdentifierType>
 			<linkingAgentIdentifierValue>http://archive.fcla.edu/format-description</linkingAgentIdentifierValue>
 		</linkingAgentIdentifier>		
+		<linkingObjectIdentifier>
+			<linkingObjectIdentifierType>DAITSS2</linkingObjectIdentifierType>
+			<linkingObjectIdentifierValue>daitss://archive.fcla.edu/p926/f0</linkingObjectIdentifierValue>
+		</linkingObjectIdentifier>
 	</event>
 
 	<!-- action plan for file 1 -->
@@ -236,7 +232,11 @@
 		<linkingAgentIdentifier>
 			<linkingAgentIdentifierType>URI</linkingAgentIdentifierType>
 			<linkingAgentIdentifierValue>http://archive.fcla.edu/action-plan</linkingAgentIdentifierValue>
-		</linkingAgentIdentifier>		
+		</linkingAgentIdentifier>	
+		<linkingObjectIdentifier>
+			<linkingObjectIdentifierType>DAITSS2</linkingObjectIdentifierType>
+			<linkingObjectIdentifierValue>daitss://archive.fcla.edu/p926/f0</linkingObjectIdentifierValue>
+		</linkingObjectIdentifier>	
 	</event>
 
 	<!-- migration of file 1 to file 2 -->
