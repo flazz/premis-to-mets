@@ -116,12 +116,18 @@
 				the ones that have a relationship with this as a related event
 				relationship/relatedObjectIdentification/relatedObjectIdentifier(Type|Value)
 			 -->
+			<xsl:with-param name="relatedObjects">
+				<xsl:text>OJB-rel0 OJB-rel1</xsl:text>
+			</xsl:with-param>						
+			
 			<!-- 
 				which agents are related to this?
 				the ones that have a related agent
 				linkingAgentIdentifier/inkingAgentIdentifier(Type|Value)
 			-->
-			
+			<xsl:with-param name="relatedAgents">
+				<xsl:text>AGN-rel0 AGN-rel1</xsl:text>
+			</xsl:with-param>			
 		</xsl:call-template>
 	</xsl:template>
 	
@@ -141,10 +147,19 @@
 	<xsl:template name="digiprov-bucket">
 		<xsl:param name="contents"/>
 		<xsl:param name="identifier"/>
+		<xsl:param name="relatedObjects"/>
+		<xsl:param name="relatedAgents"/>
 		<digiprovMD>
 			<xsl:attribute name="ID">
 				<xsl:value-of select="$identifier"/>
 			</xsl:attribute>
+			
+			<xsl:if test="string-length(concat($relatedAgents, $relatedObjects)) != 0">
+				<xsl:attribute name="ADMID">
+					<xsl:value-of select="concat($relatedAgents, ' ', $relatedObjects)"/>
+				</xsl:attribute>
+			</xsl:if>
+			
 			<xsl:call-template name="mdwrap-xmldata-bucket">
 				<xsl:with-param name="contents">
 					<xsl:copy-of select="$contents"/>
