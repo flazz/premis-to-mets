@@ -25,11 +25,11 @@
 		<file>
 <!-- ID -->
 			<xsl:attribute name="ID">
-				<xsl:text>FILE-</xsl:text><xsl:number/>
+				<xsl:text>FILE-</xsl:text><xsl:value-of select="generate-id()" />
 			</xsl:attribute>
 <!-- ADMID -->
 			<xsl:attribute name="ADMID">
-				<xsl:text>TODO ID refs goe here</xsl:text>
+				<xsl:text>OBJECT-</xsl:text><xsl:value-of select="generate-id()" />
 			</xsl:attribute>
 <!-- size -->
 			<xsl:attribute name="SIZE">
@@ -81,6 +81,9 @@
 			<xsl:with-param name="contents">
 				<xsl:copy-of select="."/>
 			</xsl:with-param>
+			<xsl:with-param name="identifier">
+				<xsl:text>OBJECT-</xsl:text><xsl:value-of select="generate-id()" />
+			</xsl:with-param>
 		</xsl:call-template>
 	</xsl:template>
 <!-- digiprovMD for premis representations -->
@@ -88,6 +91,9 @@
 		<xsl:call-template name="digiprov-bucket">
 			<xsl:with-param name="contents">
 				<xsl:copy-of select="."/>
+			</xsl:with-param>
+			<xsl:with-param name="identifier">
+				<xsl:text>REPRESENTATION-</xsl:text><xsl:value-of select="generate-id()" />
 			</xsl:with-param>
 		</xsl:call-template>
 	</xsl:template>
@@ -97,6 +103,9 @@
 			<xsl:with-param name="contents">
 				<xsl:copy-of select="."/>
 			</xsl:with-param>
+			<xsl:with-param name="identifier">
+				<xsl:text>EVENT-</xsl:text><xsl:value-of select="generate-id()" />
+			</xsl:with-param>			
 		</xsl:call-template>
 	</xsl:template>
 <!-- digiprovMD for premis agent -->
@@ -105,15 +114,18 @@
 			<xsl:with-param name="contents">
 				<xsl:copy-of select="."/>
 			</xsl:with-param>
+			<xsl:with-param name="identifier">
+				<xsl:text>AGENT-</xsl:text><xsl:value-of select="generate-id()" />
+			</xsl:with-param>
 		</xsl:call-template>
 	</xsl:template>
 <!-- mets digiprovMD bucket -->
 	<xsl:template name="digiprov-bucket">
 		<xsl:param name="contents"/>
+		<xsl:param name="identifier"/>
 		<digiprovMD>
 			<xsl:attribute name="ID">
-				<xsl:text>DPMD-</xsl:text>
-				<xsl:number/>
+				<xsl:value-of select="$identifier"/>
 			</xsl:attribute>
 			<xsl:call-template name="mdwrap-xmldata-bucket">
 				<xsl:with-param name="contents">
@@ -126,10 +138,10 @@
 <!-- mets techMD bucket -->
 	<xsl:template name="tech-bucket">
 		<xsl:param name="contents"/>
+		<xsl:param name="identifier"/>
 		<techMD>
 			<xsl:attribute name="ID">
-				<xsl:text>TMD-</xsl:text>
-				<xsl:number/>
+				<xsl:value-of select="$identifier"/>
 			</xsl:attribute>
 			<xsl:call-template name="mdwrap-xmldata-bucket">
 				<xsl:with-param name="contents">
