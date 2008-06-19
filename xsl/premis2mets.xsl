@@ -126,7 +126,17 @@
 				linkingAgentIdentifier/inkingAgentIdentifier(Type|Value)
 			-->
 			<xsl:with-param name="relatedAgents">
-				<xsl:text>AGN-rel0 AGN-rel1</xsl:text>
+				<xsl:variable name="aType">
+					<xsl:value-of select="premis:linkingAgentIdentifier/premis:linkingAgentIdentifierType"/>
+				</xsl:variable>
+				<xsl:variable name="aValue">
+					<xsl:value-of select="premis:linkingAgentIdentifier/premis:linkingAgentIdentifierValue"/>
+				</xsl:variable>
+				<xsl:for-each select="//premis:agent">
+					<xsl:if test="premis:agentIdentifier/premis:agentIdentifierType=$aType and premis:agentIdentifier/premis:agentIdentifierValue=$aValue">
+						<xsl:text>AGENT-</xsl:text><xsl:value-of select="position()" />
+					</xsl:if>
+				</xsl:for-each>
 			</xsl:with-param>			
 		</xsl:call-template>
 	</xsl:template>
@@ -153,13 +163,11 @@
 			<xsl:attribute name="ID">
 				<xsl:value-of select="$identifier"/>
 			</xsl:attribute>
-			
 			<xsl:if test="string-length(concat($relatedAgents, $relatedObjects)) != 0">
 				<xsl:attribute name="ADMID">
 					<xsl:value-of select="concat($relatedAgents, ' ', $relatedObjects)"/>
 				</xsl:attribute>
 			</xsl:if>
-			
 			<xsl:call-template name="mdwrap-xmldata-bucket">
 				<xsl:with-param name="contents">
 					<xsl:copy-of select="$contents"/>

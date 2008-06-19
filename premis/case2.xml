@@ -211,10 +211,10 @@
 				</eventOutcomeDetailExtension>
 			</eventOutcomeDetail>
 		</eventOutcomeInformation>
-		<!--
-			<xs:element name="linkingAgentIdentifier" type="eventLinkingAgentIdentifierComplexType" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="linkingObjectIdentifier" type="eventLinkingObjectIdentifierComplexType" minOccurs="0" maxOccurs="unbounded"/> 
-		-->		
+		<linkingAgentIdentifier>
+			<linkingAgentIdentifierType>URI</linkingAgentIdentifierType>
+			<linkingAgentIdentifierValue>http://archive.fcla.edu/format-description</linkingAgentIdentifierValue>
+		</linkingAgentIdentifier>		
 	</event>
 
 	<!-- action plan for file 1 -->
@@ -233,6 +233,10 @@
 				</eventOutcomeDetailExtension>
 			</eventOutcomeDetail>
 		</eventOutcomeInformation>
+		<linkingAgentIdentifier>
+			<linkingAgentIdentifierType>URI</linkingAgentIdentifierType>
+			<linkingAgentIdentifierValue>http://archive.fcla.edu/action-plan</linkingAgentIdentifierValue>
+		</linkingAgentIdentifier>		
 	</event>
 
 	<!-- migration of file 1 to file 2 -->
