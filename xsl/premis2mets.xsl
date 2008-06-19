@@ -14,9 +14,6 @@
 					<xsl:apply-templates select="premis:object[@xsi:type='file']" mode="file"/>
 				</fileGrp>
 			</fileSec>
-			<structMap>
-				<div/>
-			</structMap>
 			<xsl:apply-templates select="premis:object[@xsi:type='representation'][premis:relationship/premis:relationshipType='Structural']"/>
 		</mets>
 	</xsl:template>
@@ -68,8 +65,11 @@
 		</file>
 	</xsl:template>
 <!-- make structmap for every representation -->
-	<xsl:template match="premis:object[@xsi:type='representation'][premis:relationship/premis:relationshipType='Structural']">
+	<xsl:template match="premis:object[@xsi:type='representation' and premis:relationship/premis:relationshipType='Structural']">
 		<structMap>
+			<xsl:attribute name="ID">
+				<xsl:text>REPRESENTATION-</xsl:text><xsl:value-of select="position()"/>
+			</xsl:attribute>
 			<div>
 				<!-- find file position where type and value match -->
 				<xsl:variable name="oType">
@@ -80,13 +80,11 @@
 				</xsl:variable>
 				<xsl:for-each select="//premis:object[@xsi:type='file']">
 					<xsl:if test="(premis:objectIdentifier/premis:objectIdentifierType=$oType) and (premis:objectIdentifier/premis:objectIdentifierValue=$oValue)">
-						<div>
-							<fptr>
-								<xsl:attribute name="FILEID">
-									<xsl:text>OBJECT-</xsl:text><xsl:value-of select = "position()" />
-								</xsl:attribute>
-							</fptr>
-						</div>						
+						<fptr>
+							<xsl:attribute name="FILEID">
+								<xsl:text>OBJECT-</xsl:text><xsl:value-of select="position()" />
+							</xsl:attribute>
+						</fptr>
 					</xsl:if>
 				</xsl:for-each>
 			</div>
@@ -106,7 +104,7 @@
 		</xsl:call-template>
 	</xsl:template>
 <!-- digiprovMD for premis representations -->
-	<xsl:template match="premis:object[xsi:type='representation']">
+	<!-- <xsl:template match="premis:object[xsi:type='representation']">
 		<xsl:call-template name="digiprov-bucket">
 			<xsl:with-param name="contents">
 				<xsl:copy-of select="."/>
@@ -115,7 +113,7 @@
 				<xsl:text>REPRESENTATION-</xsl:text><xsl:value-of select="position()" />
 			</xsl:with-param>
 		</xsl:call-template>
-	</xsl:template>
+	</xsl:template> -->
 <!-- digiprovMD for premis event -->
 	<xsl:template match="premis:event">
 		<xsl:call-template name="digiprov-bucket">
