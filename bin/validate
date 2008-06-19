@@ -1,0 +1,2 @@
+#!/bin/bash
+java -Dfile=$1 -jar ./lib/xmlvalidator.jar
