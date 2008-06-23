@@ -7,6 +7,73 @@
 
 	<!-- tiff (submitted) -->
 	<object xsi:type="file">
+		<objectIdentifier> 
+			<objectIdentifierType>DAITSS2</objectIdentifierType> 
+			<objectIdentifierValue>daitss://archive.fcla.edu/p926/f0</objectIdentifierValue> 
+		</objectIdentifier> 
+		<objectCharacteristics> 
+			<compositionLevel>0</compositionLevel> 
+			<fixity> 
+				<messageDigestAlgorithm>MD5</messageDigestAlgorithm> 
+				<messageDigest>2de9ef79df730f93e40819625cf7bcb2</messageDigest> 
+			</fixity> 
+			<size>3001452</size> 
+			<format> 
+				<formatDesignation> 
+					<formatName>TIFF</formatName> 
+					<formatVersion>4.0</formatVersion> 
+				</formatDesignation> 
+				<formatRegistry> 
+					<formatRegistryName>http://www.nationalarchives.gov.uk/pronom</formatRegistryName> 
+					<formatRegistryKey>fmt/8</formatRegistryKey> 
+				</formatRegistry> 
+			</format> 
+			<objectCharacteristicsExtension> 
+				<BasicImageInformation xmlns="http://www.loc.gov/mix/v10"> 
+					<BasicImageCharacteristics> 
+						<imageWidth>1000</imageWidth> 
+						<imageHeight>1000</imageHeight> 
+						<ByteOrder>little-endian</ByteOrder> 
+						<Compression> 
+							<CompressionScheme>1</CompressionScheme> 
+						</Compression> 
+						<PhotometricInterpretation> 
+							<ColorSpace>2</ColorSpace> 
+							<ReferenceBlackWhite>0.0 255.0 0.0 255.0 0.0 255.0</ReferenceBlackWhite> 
+						</PhotometricInterpretation> 
+						<PlanarConfiguration>1</PlanarConfiguration> 
+					</BasicImageCharacteristics> 
+					<ImageCaptureMetadata> 
+						<orientation>1</orientation> 
+					</ImageCaptureMetadata> 
+				</BasicImageInformation> 
+			</objectCharacteristicsExtension> 
+		</objectCharacteristics> 
+		<!-- Three master copies: two in Gainesville, one in Tallahassee --> 
+		<storage> 
+			<contentLocation> 
+				<contentLocationType>URL</contentLocationType> 
+				<contentLocationValue>http://archive.fcla.edu:5000/silos/gainesville-1/p926</contentLocationValue> 
+			</contentLocation> 
+			<storageMedium>Hard disk</storageMedium> 
+		</storage> 
+		<storage> 
+			<contentLocation> 
+				<contentLocationType>URL</contentLocationType> 
+				<contentLocationValue>http://archive.fcla.edu:5000/silos/gainesville-2/p926</contentLocationValue> 
+			</contentLocation> 
+			<storageMedium>Hard disk</storageMedium> 
+		</storage> 
+		<storage> 
+			<contentLocation> 
+				<contentLocationType>URL</contentLocationType> 
+				<contentLocationValue>http://archive.fcla.edu:5000/silos/tallahassee-1/p926</contentLocationValue> 
+			</contentLocation> 
+			<storageMedium>Hard disk</storageMedium> 
+		</storage> 
+
+	</object>
+		
 	<!-- jp2 (migrated from tiff) -->
 	<object xsi:type="file">
 		<objectIdentifier>
