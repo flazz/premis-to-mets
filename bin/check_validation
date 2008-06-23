@@ -1,13 +1,20 @@
 #!/bin/zsh
 
-for f in premis/*.xml
-	do
+echo "# validating all PREMIS xml"
+for f in premis/*.xml ;do
+	echo "validating $(basename $f): "
+	./bin/validate $f
+	echo
+done
+
+echo "# validating transformation of PREMIS xml into METS"
+for f in premis/*.xml ;do
 	name=$(basename $f)
 	tfile=$(mktemp -t name)
 	echo -n "transforming $name ... "
 	xsltproc xsl/premis2mets.xsl $f > $tfile
 	echo "done"
-	echo "validating $name: "
+	echo "validating transformation of $name: "
 	./bin/validate $tfile
 	echo
 	rm $tfile
