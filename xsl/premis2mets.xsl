@@ -22,6 +22,7 @@
 			<xsl:apply-templates select="premis:object[@xsi:type='representation'][premis:relationship/premis:relationshipType='Structural']"/>
 		</mets>
 	</xsl:template>
+	
 	<!-- mets file -->
 	<xsl:template match="premis:object[@xsi:type='file']" mode="file">
 		<file>
@@ -88,7 +89,7 @@
 					<xsl:if test="(premis:objectIdentifier/premis:objectIdentifierType=$oType) and (premis:objectIdentifier/premis:objectIdentifierValue=$oValue)">
 						<fptr>
 							<xsl:attribute name="FILEID">
-								<xsl:text>OBJECT-</xsl:text><xsl:value-of select="position()" />
+								<xsl:text>FILE-</xsl:text><xsl:value-of select="position()" />
 							</xsl:attribute>
 						</fptr>
 					</xsl:if>
@@ -97,7 +98,7 @@
 		</structMap>
 	</xsl:template>
 	
-<!-- techMD for premis files -->
+	<!-- techMD for premis files -->
 	<xsl:template match="premis:object[@xsi:type='file']" mode="bucket">
 		<xsl:call-template name="tech-bucket">
 			<xsl:with-param name="contents">
@@ -109,7 +110,7 @@
 		</xsl:call-template>
 	</xsl:template>
 	
-<!-- event digiprovMD -->
+	<!-- event digiprovMD -->
 	<xsl:template match="premis:event">
 		<xsl:call-template name="digiprov-bucket">
 			
@@ -180,7 +181,7 @@
 		</xsl:call-template>
 	</xsl:template>
 	
-<!-- agent digiprovMD -->
+	<!-- agent digiprovMD -->
 	<xsl:template match="premis:agent">
 		<xsl:call-template name="digiprov-bucket">
 			<xsl:with-param name="contents">
@@ -192,7 +193,7 @@
 		</xsl:call-template>
 	</xsl:template>
 	
-<!-- mets digiprovMD bucket -->
+	<!-- mets digiprovMD bucket -->
 	<xsl:template name="digiprov-bucket">
 		<xsl:param name="contents"/>
 		<xsl:param name="identifier"/>
@@ -216,7 +217,7 @@
 		</digiprovMD>
 	</xsl:template>
 	
-<!-- mets techMD bucket -->
+	<!-- mets techMD bucket -->
 	<xsl:template name="tech-bucket">
 		<xsl:param name="contents"/>
 		<xsl:param name="identifier"/>
@@ -233,7 +234,7 @@
 		</techMD>
 	</xsl:template>
 	
-<!-- mets mdWrap/xmlData bucket -->
+	<!-- mets mdWrap/xmlData bucket -->
 	<xsl:template name="mdwrap-xmldata-bucket">
 		<xsl:param name="contents"/>
 		<xsl:param name="mdtype"/>

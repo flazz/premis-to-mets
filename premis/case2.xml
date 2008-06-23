@@ -4,8 +4,7 @@
 	C. Chou, F. Lazzarino
 -->
 <premis xmlns="info:lc/xmlns/premis-v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="info:lc/xmlns/premis-v2 http://www.loc.gov/standards/premis/draft-schemas-2-0/premis-v2-0.xsd http://www.loc.gov/mix/v10 http://www.loc.gov/standards/mix/mix10/mix10.xsd" version="2.0">
-
-	<!-- tiff (submitted) -->
+<!-- tiff (submitted) -->
 	<object xsi:type="file">
 		<objectIdentifier>
 			<objectIdentifierType>DAITSS2</objectIdentifierType>
@@ -49,7 +48,7 @@
 				</BasicImageInformation>
 			</objectCharacteristicsExtension>
 		</objectCharacteristics>
-		<!-- Three master copies: two in Gainesville, one in Tallahassee -->
+<!-- Three master copies: two in Gainesville, one in Tallahassee -->
 		<storage>
 			<contentLocation>
 				<contentLocationType>URL</contentLocationType>
@@ -70,17 +69,16 @@
 				<contentLocationValue>http://archive.fcla.edu:5000/silos/tallahassee-1/p926</contentLocationValue>
 			</contentLocation>
 			<storageMedium>Hard disk</storageMedium>
-		</storage>		
+		</storage>
 	</object>
-
-	<!-- jp2 (migrated from tiff) -->
+<!-- jp2 (migrated from tiff) -->
 	<object xsi:type="file">
 		<objectIdentifier>
 			<objectIdentifierType>DAITSS2</objectIdentifierType>
 			<objectIdentifierValue>daitss://archive.fcla.edu/p926/f1</objectIdentifierValue>
 		</objectIdentifier>
 		<objectCharacteristics>
-			<compositionLevel>0</compositionLevel> 
+			<compositionLevel>0</compositionLevel>
 			<fixity>
 				<messageDigestAlgorithm>MD5</messageDigestAlgorithm>
 				<messageDigest>8c975de69a9419b8a02dc985839ea851</messageDigest>
@@ -93,10 +91,10 @@
 				<formatRegistry>
 					<formatRegistryName>http://www.nationalarchives.gov.uk/pronom</formatRegistryName>
 					<formatRegistryKey>x-fmt/392</formatRegistryKey>
-				</formatRegistry>								
+				</formatRegistry>
 			</format>
 			<objectCharacteristicsExtension>
-				<BasicImageInformation xmlns="http://www.loc.gov/mix/v10" >
+				<BasicImageInformation xmlns="http://www.loc.gov/mix/v10">
 					<BasicImageCharacteristics>
 						<imageWidth>1000</imageWidth>
 						<imageHeight>1000</imageHeight>
@@ -112,12 +110,11 @@
 					</BasicImageCharacteristics>
 					<ImageCaptureMetadata>
 						<orientation>1</orientation>
-					</ImageCaptureMetadata> 
+					</ImageCaptureMetadata>
 				</BasicImageInformation>
 			</objectCharacteristicsExtension>
 		</objectCharacteristics>
-		
-		<!-- Three master copies: two in Gainesville, one in Tallahassee -->
+<!-- Three master copies: two in Gainesville, one in Tallahassee -->
 		<storage>
 			<contentLocation>
 				<contentLocationType>URL</contentLocationType>
@@ -139,7 +136,6 @@
 			</contentLocation>
 			<storageMedium>Hard disk</storageMedium>
 		</storage>
-		
 		<relationship>
 			<relationshipType>derrivation</relationshipType>
 			<relationshipSubType>has source</relationshipSubType>
@@ -152,10 +148,8 @@
 				<relatedEventIdentifierValue>3</relatedEventIdentifierValue>
 			</relatedEventIdentification>
 		</relationship>
-		
 	</object>
-
-	<!-- R-0 (original sip) -->
+<!-- R-0 (original sip) -->
 	<object xsi:type="representation">
 		<objectIdentifier>
 			<objectIdentifierType>TBD</objectIdentifierType>
@@ -170,8 +164,7 @@
 			</relatedObjectIdentification>
 		</relationship>
 	</object>
-
-	<!-- R-1 -->
+<!-- R-1 -->
 	<object xsi:type="representation">
 		<objectIdentifier>
 			<objectIdentifierType>TBD</objectIdentifierType>
@@ -186,8 +179,7 @@
 			</relatedObjectIdentification>
 		</relationship>
 	</object>
-
-	<!-- format description of file 1 -->
+<!-- format description of file 1 -->
 	<event>
 		<eventIdentifier>
 			<eventIdentifierType>DAITSS</eventIdentifierType>
@@ -206,14 +198,13 @@
 		<linkingAgentIdentifier>
 			<linkingAgentIdentifierType>URI</linkingAgentIdentifierType>
 			<linkingAgentIdentifierValue>http://archive.fcla.edu/format-description</linkingAgentIdentifierValue>
-		</linkingAgentIdentifier>		
+		</linkingAgentIdentifier>
 		<linkingObjectIdentifier>
 			<linkingObjectIdentifierType>DAITSS2</linkingObjectIdentifierType>
 			<linkingObjectIdentifierValue>daitss://archive.fcla.edu/p926/f0</linkingObjectIdentifierValue>
 		</linkingObjectIdentifier>
 	</event>
-
-	<!-- action plan for file 1 -->
+<!-- action plan for file 1 -->
 	<event>
 		<eventIdentifier>
 			<eventIdentifierType>DAITSS</eventIdentifierType>
@@ -225,21 +216,20 @@
 			<eventOutcomeDetail>
 				<eventOutcomeDetailExtension>
 					<migrate>http://archive.fcla.edu/xform/tiff/jp2</migrate>
-<limitation type="normalize">Unsupported palette value</limitation>									
+					<limitation type="normalize">Unsupported palette value</limitation>
 				</eventOutcomeDetailExtension>
 			</eventOutcomeDetail>
 		</eventOutcomeInformation>
 		<linkingAgentIdentifier>
 			<linkingAgentIdentifierType>URI</linkingAgentIdentifierType>
 			<linkingAgentIdentifierValue>http://archive.fcla.edu/action-plan</linkingAgentIdentifierValue>
-		</linkingAgentIdentifier>	
+		</linkingAgentIdentifier>
 		<linkingObjectIdentifier>
 			<linkingObjectIdentifierType>DAITSS2</linkingObjectIdentifierType>
 			<linkingObjectIdentifierValue>daitss://archive.fcla.edu/p926/f0</linkingObjectIdentifierValue>
-		</linkingObjectIdentifier>	
+		</linkingObjectIdentifier>
 	</event>
-
-	<!-- migration of file 1 to file 2 -->
+<!-- migration of file 1 to file 2 -->
 	<event>
 		<eventIdentifier>
 			<eventIdentifierType>DAITSS</eventIdentifierType>
@@ -254,9 +244,8 @@
 			<linkingAgentIdentifierType>URI</linkingAgentIdentifierType>
 			<linkingAgentIdentifierValue>http://archive.fcla.edu/xform/tiff/jp2</linkingAgentIdentifierValue>
 		</linkingAgentIdentifier>
-	</event>	
-
-	<!-- format description service -->
+	</event>
+<!-- format description service -->
 	<agent>
 		<agentIdentifier>
 			<agentIdentifierType>URI</agentIdentifierType>
@@ -265,8 +254,7 @@
 		<agentName>Format Description Service</agentName>
 		<agentType>Web Service</agentType>
 	</agent>
-
-	<!-- action plan service -->
+<!-- action plan service -->
 	<agent>
 		<agentIdentifier>
 			<agentIdentifierType>URI</agentIdentifierType>
@@ -274,16 +262,15 @@
 		</agentIdentifier>
 		<agentName>Action Plan Service</agentName>
 		<agentType>Web Service</agentType>
-	</agent>	
-
-	<!-- tiff to jp2 transformation service -->
+	</agent>
+<!-- tiff to jp2 transformation service -->
 	<agent>
 		<agentIdentifier>
 			<agentIdentifierType>URI</agentIdentifierType>
 			<agentIdentifierValue>http://archive.fcla.edu/xform/tiff/jp2</agentIdentifierValue>
 		</agentIdentifier>
 		<agentName>Tiff to JP2 conversion Service</agentName>
-		<agentType>Web Service</agentType>		
-		<!-- TODO link to all events that use this agent -->
-	</agent>	
+		<agentType>Web Service</agentType>
+<!-- TODO link to all events that use this agent -->
+	</agent>
 </premis>
