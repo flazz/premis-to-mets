@@ -1,0 +1,14 @@
+#!/bin/zsh
+
+for f in premis/*.xml
+	do
+	name=$(basename $f)
+	tfile=$(mktemp -t name)
+	echo -n "transforming $name ... "
+	xsltproc xsl/premis2mets.xsl $f > $tfile
+	echo "done"
+	echo "validating $name: "
+	./bin/validate $tfile
+	echo
+	rm $tfile
+done
