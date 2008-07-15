@@ -1,0 +1,11 @@
+<transformation>
+	
+	<description>
+		transform a wave file to wave/lpcm
+	</description>
+	
+	<command>
+		/usr/bin/wave_transformer --output-codel=LPCM <input_file/> <output_file/>
+	</command>
+	
+</transformation>
