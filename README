@@ -1,0 +1,11 @@
+Directories in Project
+======================
+bin:	scripts used in development
+documents:	documents for this project
+lib:	libraries used in development
+premis:	premis xml
+premis-in-mets: mets xml with premis
+schema:	xml schema
+scraps:	scrap xml files
+validations:	These programs validate profile specific rules in PREMIS/METS documents.
+xsl:	xsl transformations
