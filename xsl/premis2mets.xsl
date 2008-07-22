@@ -26,27 +26,34 @@
 	<!-- mets file -->
 	<xsl:template match="premis:object[@xsi:type='file']" mode="file">
 		<file>
+
 			<!-- ID -->
 			<xsl:attribute name="ID">
 				<xsl:text>FILE-</xsl:text><xsl:value-of select="position()" />
 			</xsl:attribute>
+
 			<!-- ADMID -->
 			<xsl:attribute name="ADMID">
 				<xsl:text>OBJECT-</xsl:text><xsl:value-of select="position()" />
 			</xsl:attribute>
+
 			<!-- size -->
 			<xsl:attribute name="SIZE">
 				<xsl:value-of select="premis:objectCharacteristics/premis:size"/>
 			</xsl:attribute>
-			<!-- checksum -->
-			<xsl:attribute name="CHECKSUM">
-				<xsl:value-of select="premis:objectCharacteristics/premis:fixity/premis:messageDigest"/>
-			</xsl:attribute>
-			<xsl:if test="contains('HAVAL MD5 SHA-1 SHA-256 SHA-384 SHA-512 TIGER WHIRLPOOL', premis:objectCharacteristics/premis:fixity/premis:messageDigestAlgorithm)">
-				<xsl:attribute name="CHECKSUMTYPE">
-					<xsl:value-of select="premis:objectCharacteristics/premis:fixity/premis:messageDigestAlgorithm"/>
+			
+			<!-- checksum if it exists-->
+			<xsl:if test="premis:objectCharacteristics/premis:fixity">
+				<xsl:attribute name="CHECKSUM">
+					<xsl:value-of select="premis:objectCharacteristics/premis:fixity/premis:messageDigest"/>
 				</xsl:attribute>
+				<xsl:if test="contains('HAVAL MD5 SHA-1 SHA-256 SHA-384 SHA-512 TIGER WHIRLPOOL', premis:objectCharacteristics/premis:fixity/premis:messageDigestAlgorithm)">
+					<xsl:attribute name="CHECKSUMTYPE">
+						<xsl:value-of select="premis:objectCharacteristics/premis:fixity/premis:messageDigestAlgorithm"/>
+					</xsl:attribute>
+				</xsl:if>
 			</xsl:if>
+
 			<!-- if identifier type is in LOCTYPE then set LOCTYPE to it, otherwise set it to OTHER and OTHERLOCTYPE -->
 			<FLocat>
 				<xsl:choose>
