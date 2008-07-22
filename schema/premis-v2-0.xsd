@@ -4,7 +4,11 @@
  PREMIS Preservation Metadata Schema  
  Version 2.0 , April 2008   DRAFT (actual date to be supplied when final)
 
-This draft last updated May 13
+This draft last updated June 25.
+ - "termOfGrant ", previously a simple string of type edtf,  changed to a complexType with startDate and endDate both of type edtf. 
+ - <storage> changed from mandatory to optional for file and bitstream.  This conflicts with the data dictionary which lists it mandatory, erroneously, and it has been cited as errata. 
+
+Also updated May 13
 'open' and 'unknown' changed to 'OPEN' and 'UNKNOWN'  (i.e. changed to uppercase) in regular expressions in date/time definition.
 
 also updated May 7 
@@ -20,6 +24,18 @@ changed to:
 		<xs:attribute name="version" type="versionSimpleType" ..../>
 because of namespace complexities. 
 
+Also updated May 22. 
+All occurences of 
+       termsOfGrant
+changed to:
+	termOfGrant
+because that's the term used in the data dictionary
+
+Also updated June 10.
+"termOfGrant "
+changed to:
+	"termOfGrant"
+ trailing space removed. (The trailing space was not flagged by xmlSpy but this error was reported by a user using a different validator).
 
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" targetNamespace="info:lc/xmlns/premis-v2" xmlns="info:lc/xmlns/premis-v2" elementFormDefault="qualified" attributeFormDefault="unqualified">
@@ -75,7 +91,7 @@ For an object of type bitstream: <object xsi:type="bitstream">  will mean that t
 					<xs:element ref="significantProperties" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element ref="objectCharacteristics" minOccurs="1" maxOccurs="unbounded"/>
 					<xs:element ref="originalName" minOccurs="0" maxOccurs="1"/>
-					<xs:element ref="storage" minOccurs="1" maxOccurs="unbounded"/>
+					<xs:element ref="storage" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element ref="environment" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element ref="signatureInformation" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element ref="relationship" minOccurs="0" maxOccurs="unbounded"/>
@@ -120,7 +136,7 @@ For an object of type bitstream: <object xsi:type="bitstream">  will mean that t
 					<xs:element ref="objectIdentifier" minOccurs="1" maxOccurs="unbounded"/>
 					<xs:element ref="significantProperties" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element ref="objectCharacteristics" minOccurs="1" maxOccurs="unbounded"/>
-					<xs:element ref="storage" minOccurs="1" maxOccurs="unbounded"/>
+					<xs:element ref="storage" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element ref="environment" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element ref="signatureInformation" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element ref="relationship" minOccurs="0" maxOccurs="unbounded"/>
@@ -602,7 +618,7 @@ For an object of type bitstream: <object xsi:type="bitstream">  will mean that t
 		<xs:sequence>
 			<xs:element ref="act" minOccurs="1" maxOccurs="1"/>
 			<xs:element ref="restriction" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element ref="termsOfGrant" minOccurs="1" maxOccurs="1"/>
+			<xs:element ref="termOfGrant" minOccurs="1" maxOccurs="1"/>
 			<xs:element ref="rightsGrantedNote" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
@@ -687,7 +703,18 @@ For an object of type bitstream: <object xsi:type="bitstream">  will mean that t
 			<xs:element ref="storageMedium" minOccurs="1" maxOccurs="1"/>
 		</xs:choice>
 	</xs:complexType>
+	<!--  
+****************termOfGrantComplexType
+-->
+	<xs:complexType name="termOfGrantComplexType">
+			<xs:sequence>
+				<xs:element ref="startDate" minOccurs="1" maxOccurs="1"/>
+				<xs:element ref="endDate" minOccurs="0" maxOccurs="1"/>
+			</xs:sequence>
+	</xs:complexType>
 	<!-- 
+
+
 
 *************Element Declarations **********************
 
@@ -823,6 +850,7 @@ For an object of type bitstream: <object xsi:type="bitstream">  will mean that t
 	<xs:element name="statuteInformation" type="statuteInformationComplexType"/>
 	<xs:element name="software" type="softwareComplexType"/>
 	<xs:element name="storage" type="storageComplexType"/>
+	<xs:element name="termOfGrant" type="termOfGrantComplexType"/>
 	<!-- 
 ****** other xs  type  element declarations
  	-->
@@ -834,11 +862,13 @@ For an object of type bitstream: <object xsi:type="bitstream">  will mean that t
 ****** date type  element declarations
  	-->
 	<xs:element name="dateCreatedByApplication" type="edtfSimpleType"/>
+		<xs:element name="endDate" type="edtfSimpleType"/>
 	<xs:element name="copyrightStatusDeterminationDate" type="edtfSimpleType"/>
 	<xs:element name="eventDateTime" type="edtfSimpleType"/>
 	<xs:element name="preservationLevelDateAssigned" type="edtfSimpleType"/>
+			<xs:element name="startDate" type="edtfSimpleType"/>
 	<xs:element name="statuteInformationDeterminationDate" type="edtfSimpleType"/>
-	<xs:element name="termsOfGrant" type="edtfSimpleType"/>
+	
 	<!-- 
 ****** extension  type  element declarations
  	-->
