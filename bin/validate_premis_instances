@@ -1,0 +1,17 @@
+#!/bin/bash
+
+exit_code=0
+
+echo -n "validating premis instances "
+for f in premis-instances/*.xml ;do
+	echo -n .
+	./bin/validate $f > /dev/null 2>&1 
+	if [[ $? != 0 ]] ;then
+		echo
+		echo $f does not validate
+		exit_code=1
+	fi
+done
+echo
+
+exit $exit_code

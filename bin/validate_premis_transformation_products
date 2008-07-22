@@ -1,0 +1,31 @@
+#!/bin/bash
+
+exit_code=0
+
+echo -n "validating mets transformed from premis instances "
+
+for f in premis-instances/*.xml ;do
+	
+	echo -n .
+	
+	tfile=$(mktemp -t name)
+	
+	xsltproc xsl/premis2mets.xsl $f > $tfile > /dev/null 2>&1
+	if [[ $? != 0 ]] ;then
+		echo
+		echo $f does not transform
+		exit_code=1
+	fi
+	
+	./bin/validate $f > /dev/null 2>&1 
+	if [[ $? != 0 ]] ;then
+		echo
+		echo $f does not validate
+		exit_code=1
+	fi
+	
+	rm $tfile
+done
+echo 
+
+exit $exit_code
