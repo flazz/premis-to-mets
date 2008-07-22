@@ -1,3 +1,5 @@
+# This program detects if there are any orphaned PREMIS elements in the METS
+
 require "rexml/document"
 
 def all_objects_represented?(doc)
